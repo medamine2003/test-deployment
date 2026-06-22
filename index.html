@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Test Déploiement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚀 Déploiement réussi !</h1>
+    <p>Si tu vois cette page en ligne, ton déploiement fonctionne.</p>
+
+    <button onclick="showMessage()">
+      Tester le JavaScript
+    </button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").textContent =
+        "Le JavaScript fonctionne aussi ✅";
+    }
+  </script>
+
+</body>
+</html>
