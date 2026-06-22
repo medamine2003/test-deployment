@@ -17,15 +17,6 @@ pipeline {
                 sh 'test -f index.css && echo "index.css trouvé"'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh '''
-                    docker rm -f test-deployment-site || true
-                    docker run -d --name test-deployment-site --network devops -p 8081:80 nginx:alpine
-                    sleep 2
-                    docker cp $WORKSPACE/. test-deployment-site:/usr/share/nginx/html/
-                '''
-            }
-        }
+        
     }
 }
